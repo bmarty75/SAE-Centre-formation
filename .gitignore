@@ -1,0 +1,14 @@
+# Fichiers compilés
+*.class
+
+# Logs
+*.log
+
+# Répertoires générés par Eclipse/IDE
+bin/
+target/
+.idea/
+.vscode/
+
+# Autres fichiers temporaires
+*.tmp
