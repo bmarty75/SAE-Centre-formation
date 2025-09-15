@@ -7,7 +7,7 @@
 # Répertoires générés par Eclipse/IDE
 bin/
 target/
-.idea/
+../.idea/
 .vscode/
 
 # Autres fichiers temporaires
