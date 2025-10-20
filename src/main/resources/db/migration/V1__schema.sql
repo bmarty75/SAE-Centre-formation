@@ -87,7 +87,7 @@ CREATE TABLE tac_entry (
   origine TEXT,
   thematique TEXT,
   correction TEXT,
-  analyse TEXT,
+  analyse_causes TEXT,
   action TEXT,
   echeance DATE,
   statut TEXT,
