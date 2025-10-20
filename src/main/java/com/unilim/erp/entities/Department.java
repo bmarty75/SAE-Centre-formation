@@ -1,7 +1,7 @@
 package com.unilim.erp.entities;
 
-import java.util.UUID;
 import jakarta.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Table(name = "department")
