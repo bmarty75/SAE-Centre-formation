@@ -2,6 +2,8 @@ package com.unilim.erp.entities;
 
 import jakarta.persistence.*;
 import java.util.UUID;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "ec")

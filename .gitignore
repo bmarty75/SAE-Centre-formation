@@ -12,3 +12,5 @@ target/
 
 # Autres fichiers temporaires
 *.tmp
+
+.idea/
