@@ -1,7 +1,6 @@
 package com.unilim.erp.entities;
 
 
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
 import com.unilim.erp.domain.UserRole;
 import com.unilim.erp.domain.UserStatus;
 import jakarta.persistence.Entity;
@@ -9,6 +8,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.Instant;
 import java.util.UUID;
 
 @Entity
@@ -20,7 +20,7 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column(unique = true, nullable = false, length = 50)
+    @Column(unique = true, nullable = false)
     private String email;
 
     @Column(nullable = false)
@@ -32,9 +32,11 @@ public class AppUser {
     @Column
     private String phone;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable=false)
     private UserRole role;
 
+    @Enumerated(EnumType.STRING)
     @Column(nullable=false)
     private UserStatus status;
 
@@ -42,6 +44,8 @@ public class AppUser {
     @JoinColumn(name="department_id")
     private Department department;
 
+    @Column(nullable = false,updatable = false)
+    private Instant createdAt = Instant.now();
     public AppUser() {
     }
 
