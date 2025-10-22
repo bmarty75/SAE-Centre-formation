@@ -42,6 +42,21 @@ public class AppUser {
     @JoinColumn(name="department_id")
     private Department department;
 
+    public AppUser() {
+    }
+
+    public AppUser(String email, String passwordHash, String displayName, String phone, UserRole role, UserStatus status, Department department) {
+        this.email = email;
+        this.passwordHash = passwordHash;
+        this.displayName = displayName;
+        this.phone = phone;
+        this.role = role;
+        this.status = status;
+        this.department = department;
+    }
+
+
+
 
 
 
