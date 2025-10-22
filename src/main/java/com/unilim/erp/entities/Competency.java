@@ -8,8 +8,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "department")
-public class Department {
+@Table(name = "competency")
+public class Competency {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
@@ -18,18 +18,13 @@ public class Department {
     private String code;
 
     @Column(nullable = false)
-    private String label;
+    private String title;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "parent_id")
-    private Department parent;
-
-    public Department() {
+    public Competency() {
     }
 
-    public Department(String code, String label, Department parent) {
+    public Competency(String code, String title) {
         this.code = code;
-        this.label = label;
-        this.parent = parent;
+        this.title = title;
     }
 }
