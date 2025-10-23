@@ -1,4 +1,7 @@
 package com.unilim.erp.repositories;
 
-public class DepartmentRepositories {
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface DepartmentRepositories {
 }
